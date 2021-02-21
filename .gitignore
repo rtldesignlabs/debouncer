@@ -1,0 +1,37 @@
+# Ignore everything
+*
+# Allow whitelisting subdirectories
+!*/
+# Don't ignore the block design files
+!/bd/*/*.bd
+# Don't ignore the constraint files
+!/constraints/**/*.xdc
+# Don't ignore the synthesis files 
+!/hdl/**/*.sv
+!/hdl/**/*.v
+!/hdl/**/*.vhd
+!/hdl/**/*.vhdl
+# Don't ignore the IP defintion files
+!/ip/*/*.xci
+# Don't ignore the custom IP defintion files
+!/ip/*/*.xml
+!/ip/*/src/*.sv
+!/ip/*/src/*.v
+!/ip/*/src/*.vhd
+!/ip/*/src/*.vhdl
+!/ip/*/xgui/*.tcl
+# Don't ignore the output files
+!/output/*.bit
+!/output/*.hdf
+!/output/*.xsa
+!/output/*/*.dcp
+# Don't ignore the project file and build script
+!/project/*.xpr
+# Don't ignore the testbench files and simulation scripts
+!/sim/**/*.sv
+!/sim/**/*.v
+!/sim/**/*.vhd
+!/sim/**/*.vhdl
+!/sim/**/*.tcl
+# Don't ignore this file
+!.gitignore
