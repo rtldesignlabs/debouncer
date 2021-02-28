@@ -1,2 +1,2 @@
 # debouncer
-Debouncer core for FPGA inputs
+Debouncer module for input pins
