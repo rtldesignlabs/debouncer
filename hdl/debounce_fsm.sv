@@ -22,14 +22,15 @@ module debounce_fsm
     enum logic [1:0] {  IDLE,
                         EDGE_DETECTED,
                         DEBOUNCED_HIGH,
-                        DEBOUNCED_LOW } fsm_state;
+                        DEBOUNCED_LOW } fsm_state = IDLE;
 
     // Main FSM
     always_ff @(posedge i_clock) begin
         case (fsm_state)
             IDLE : begin
-                fsm_state <= EDGE_DETECTED;
+                o_debounced_signal <= 1'b0;
                 debounce_counter <= 'b0;
+                fsm_state <= EDGE_DETECTED;
             end
 
             EDGE_DETECTED : begin
