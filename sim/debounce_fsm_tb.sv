@@ -20,11 +20,11 @@ module debounce_fsm_tb ();
 
     // DUT Instantiation
     debounce_fsm # (
-        .DEBOUNCE_COUNTER_WIDTH (16)
+        .DEBOUNCE_COUNTER_WIDTH (24)
     )
     debounce_fsm_inst (
         .i_clock            (clock),
-        .i_debounce_counter (16'd10),
+        .i_debounce_counter (24'd10),
         .i_bouncing_signal  (bouncing_signal),
         .o_debounced_signal (debounced_signal)
     );
@@ -41,6 +41,14 @@ module debounce_fsm_tb ();
         repeat (1) @(posedge clock);
         bouncing_signal = 1'b0;
         repeat (3) @(posedge clock);
+        bouncing_signal = 1'b1;
+        repeat (2) @(posedge clock);
+        bouncing_signal = 1'b0;
+        repeat (1) @(posedge clock);
+        bouncing_signal = 1'b1;
+        repeat (1) @(posedge clock);
+        bouncing_signal = 1'b0;
+        repeat (2) @(posedge clock);
         bouncing_signal = 1'b1;
     end
 
