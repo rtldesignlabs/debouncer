@@ -2,7 +2,7 @@ module zed_debouncer
     # (
         parameter SWITCH_COUNT              = 8,
         parameter BUTTON_COUNT              = 5,
-        parameter DEBOUNCE_COUNTER_WIDTH    = 16
+        parameter DEBOUNCE_COUNTER_WIDTH    = 24
     )
     (
         // Clock

@@ -1,6 +1,6 @@
 module debounce_fsm
     # (
-        parameter DEBOUNCE_COUNTER_WIDTH    = 16
+        parameter DEBOUNCE_COUNTER_WIDTH    = 24
     )
     (
         // Clock

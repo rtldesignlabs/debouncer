@@ -49,15 +49,15 @@ module zed_debouncer_top
     # (
         .SWITCH_COUNT           (8),
         .BUTTON_COUNT           (5),
-        .DEBOUNCE_COUNTER_WIDTH (16)
+        .DEBOUNCE_COUNTER_WIDTH (24)
     )
     zed_debouncer_inst
     (
         // Clock
         .i_clock                    (i_clock),
         // Debounce counter values
-        .i_switch_debounce_counter  (16'd1000),
-        .i_button_debounce_counter  (16'd1000),
+        .i_switch_debounce_counter  (24'd1000000000),
+        .i_button_debounce_counter  (24'd1000000000),
         // Input switches
         .i_sw0                      (i_sw0),
         .i_sw1                      (i_sw1),
