@@ -90,7 +90,17 @@ module zed_debouncer_top
         .o_btnc                     (btnc)
     );
 
-    assign o_ld0 = (sw0 | btnu | btnd | btnl | btnr | btnc);    // LD0 can be activated by SW0 or any of the pushbuttons
+    // LD0 assignment, can be activated by SW0 or any of the pushbuttons
+    led_share led_share_inst (
+        .i_sw0  (sw0),
+        .i_btnu (btnu),
+        .i_btnd (btnd),
+        .i_btnl (btnl),
+        .i_btnr (btnr),
+        .i_btnc (btnc),
+        .o_ld0  (o_ld0)
+    );
+    
     assign o_ld1 = sw1;
     assign o_ld2 = sw2;
     assign o_ld3 = sw3;
