@@ -56,8 +56,8 @@ module zed_debouncer_top
         // Clock
         .i_clock                    (i_clock),
         // Debounce counter values
-        .i_switch_debounce_counter  (24'd1000000000),
-        .i_button_debounce_counter  (24'd1000000000),
+        .i_switch_debounce_counter  (24'd1000000),
+        .i_button_debounce_counter  (24'd1000000),
         // Input switches
         .i_sw0                      (i_sw0),
         .i_sw1                      (i_sw1),
